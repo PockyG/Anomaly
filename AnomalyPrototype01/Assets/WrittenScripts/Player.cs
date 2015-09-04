@@ -25,6 +25,7 @@ public class Player : MonoBehaviour {
 	private float oxygenValue = 100;
 	private float oxygenMax = 100;
 	public float oxygenDepleteRate = 5; // Depletes oxygen by value every second.
+	public float boostUse = 15; // Amount of oxygen used by the boost.
 	//Oxygen property. Will correctly set between 0 and oxygenMax. May also call a death function if it does reach 0;
 
 	public Rigidbody r;
@@ -103,21 +104,22 @@ public class Player : MonoBehaviour {
 		if (Oxygen < 0)
 			Oxygen = 0;
 
-		if (Oxygen < 15) {
+		if (Oxygen < 20) {
 			//blurScript.enabled = true;
-			blurScript.focalSize = Mathf.Lerp (blurScript.focalSize,0.1f,Time.deltaTime*0.05f);
+			blurScript.focalSize = Mathf.Lerp (blurScript.focalSize,0.1f*Oxygen,Time.deltaTime);
+			//blurScript.focalSize = Oxygen*0.1f;
 		} else {
 			//blurScript.enabled = false;
-			blurScript.focalSize = Mathf.Lerp (blurScript.focalSize,100f,Time.deltaTime*0.25f);
+			blurScript.focalSize = Mathf.Lerp (blurScript.focalSize,50f,Time.deltaTime*0.05f);
 		}
 
 		asd = (285 * (Oxygen / oxygenMax)) + 35;
 		arrow.transform.localEulerAngles = new Vector3(0,asd,0);
 
-		if (Input.GetKeyDown (KeyCode.LeftShift)) {
+		if (Input.GetKeyDown (KeyCode.LeftShift) && Oxygen >= boostUse) {
 			//r.AddForce(Camera.main.gameObject.transform.forward * 30000);
 			r.velocity = Camera.main.gameObject.transform.forward*20;
-			Oxygen -= 20;
+			Oxygen -= boostUse;
 		}
 	}
 
