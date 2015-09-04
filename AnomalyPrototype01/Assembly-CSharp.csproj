@@ -46,9 +46,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\WrittenScripts\EntityMove.cs" />
      <Compile Include="Assets\WrittenScripts\OxygenStation.cs" />
      <Compile Include="Assets\WrittenScripts\Player.cs" />
      <Compile Include="Assets\WrittenScripts\StationInteraction.cs" />
+     <Compile Include="Assets\WrittenScripts\World.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />

@@ -5,6 +5,8 @@ using UnityStandardAssets.Characters.FirstPerson;
 using UnityStandardAssets.ImageEffects;
 
 public class Player : MonoBehaviour {
+
+	public Terrain terrain;
 	//makes fields visible in the editor. Wanted to make it readonly but apparently that is more complicated.
 	[SerializeField]
 	private bool inWater = false;
@@ -83,7 +85,7 @@ public class Player : MonoBehaviour {
 		//		Oxygen += 5*Time.deltaTime;
 		//}
 
-		print (Oxygen);
+
 
 		float asd = armObj.transform.localEulerAngles.x;
 		if (arm) {
@@ -99,11 +101,6 @@ public class Player : MonoBehaviour {
 			arm = !arm;
 		}
 		
-		if (Oxygen > 100)
-			Oxygen = 100;
-		if (Oxygen < 0)
-			Oxygen = 0;
-
 		if (Oxygen < 20) {
 			//blurScript.enabled = true;
 			blurScript.focalSize = Mathf.Lerp (blurScript.focalSize,0.1f*Oxygen,Time.deltaTime);
@@ -121,6 +118,16 @@ public class Player : MonoBehaviour {
 			r.velocity = Camera.main.gameObject.transform.forward*20;
 			Oxygen -= boostUse;
 		}
+
+
+
+		//If player somehow ends up under the map, place player on the map.
+		if (transform.position.y < terrain.SampleHeight (this.transform.position)) {
+			Vector3 newPos = new Vector3(this.transform.position.x,terrain.SampleHeight(this.transform.position), this.transform.position.z);
+			this.transform.position = newPos;
+		}
+
+
 	}
 
 	/// <summary>
