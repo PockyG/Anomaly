@@ -7,8 +7,6 @@ Project("{ADE6E126-2435-1CF2-3A50-DF09C04F27BA}") = "AnomalyPrototype01", "Assem
 EndProject
 Project("{ADE6E126-2435-1CF2-3A50-DF09C04F27BA}") = "AnomalyPrototype01", "Assembly-CSharp-Editor.csproj", "{AE1F31E6-DCA4-26FB-18BF-6DF29A4D413B}"
 EndProject
-Project("{ADE6E126-2435-1CF2-3A50-DF09C04F27BA}") = "AnomalyPrototype01", "Assembly-UnityScript.unityproj", "{F719E758-0FFC-0DAB-4662-8AF7C0703BD5}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,15 +25,11 @@ Global
 		{AE1F31E6-DCA4-26FB-18BF-6DF29A4D413B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE1F31E6-DCA4-26FB-18BF-6DF29A4D413B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE1F31E6-DCA4-26FB-18BF-6DF29A4D413B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F719E758-0FFC-0DAB-4662-8AF7C0703BD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F719E758-0FFC-0DAB-4662-8AF7C0703BD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F719E758-0FFC-0DAB-4662-8AF7C0703BD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F719E758-0FFC-0DAB-4662-8AF7C0703BD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-													GlobalSection(MonoDevelopProperties) = preSolution
+																	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
