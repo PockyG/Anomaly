@@ -1,9 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Terminal.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\WrittenScripts\EntityMove.cs">
     <Files>
-      <File FileName="Assets\Terminal.cs" Line="6" Column="2" />
-      <File FileName="Assets\WrittenScripts\Player.cs" Line="1" Column="1" />
+      <File FileName="Assets\WrittenScripts\EntityMove.cs" Line="101" Column="13" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
